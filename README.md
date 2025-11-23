@@ -121,7 +121,7 @@ Optimointialgoritmi Adam, kustannusfunktio sparse categorical crossentropy, epoo
 - Tulosten visualisointi:
 Koulutuksen tarkkuutta kuvaava käyrä tallennettiin tiedostoon **training_curve.png** jota käytetään alla 'Tulokset' osiossa.
 ### Tulokset
-Mallin koulutus sujui odotetusti ja suorituskyky kehittyi tasaisesti viiden epookin aikana. Lopullinen tarkkuus testidatassa oli 0.8754, mikä tarkoittaa että neuroverkko luokittelee testidatan kuvista noin 87.5% oikein ilman mitään suurempaa optimointia. Koulutusvaiheen aikana tallennettiin kuvaaja koulutus ja validointidatasta, sekä kuvakaappaus terminaalin epookeista:
+Mallin koulutus sujui odotetusti ja suorituskyky kehittyi tasaisesti viiden epookin aikana. Lopullinen tarkkuus testidatassa oli 0.8706, mikä tarkoittaa että neuroverkko luokittelee testidatan kuvista noin 87% oikein ilman mitään suurempaa optimointia. Koulutusvaiheen aikana tallennettiin kuvaaja koulutus ja validointidatasta, sekä kuvakaappaus terminaalin epookeista:
 
 ![Koulutus tarkkuus käyrä](./images/training_curve.png)
 ![epookit terminaalissa](./images/epookit.png)
