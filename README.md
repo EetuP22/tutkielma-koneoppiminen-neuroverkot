@@ -124,7 +124,7 @@ Koulutuksen tarkkuutta kuvaava käyrä tallennettiin tiedostoon **training_curve
 Mallin koulutus sujui odotetusti ja suorituskyky kehittyi tasaisesti viiden epookin aikana. Lopullinen tarkkuus testidatassa oli 0.8754, mikä tarkoittaa että neuroverkko luokittelee testidatan kuvista noin 87.5% oikein ilman mitään suurempaa optimointia. Koulutusvaiheen aikana tallennettiin kuvaaja koulutus ja validointidatasta, sekä kuvakaappaus terminaalin epookeista:
 
 ![Koulutus tarkkuus käyrä](./images/training_curve.png)
-![epookit terminaalissa](./images/Screenshot%202025-11-23%20113833.png)
+![epookit terminaalissa](./images/epookit.png)
 
 Kuvat osoittavat, että koulutus ja validointitarkkuus nousee tasaisesti, eikä ole merkkejä ylisovittamisesta. Tarkoittaen, että malli oppii dataa oikein ja toimii kevyenä demomstraationa neuroverkon toiminnasta.
 
