@@ -7,19 +7,19 @@
 
 
 ## Johdanto
-Koneoppiminen (machine learning) on modernin tietojenkäsittelyn yksi keskeisimmistä osa-alueista, sitä hyyödynnetään useilla eri teknologian osa-alueilla kääntäjä sovelluksista itseajaviin autoihin. Ykinkertaistettuna koneoppimisella tarkoitetaan prosessia, jossa ohjelmistoa koulutetaan datalla tekemään ennustuksia tai luomaan kontenttia yms. Tätä ohjelmistoa kutsutaan malliksi (model).
+Koneoppiminen (machine learning) on modernin tietojenkäsittelyn yksi keskeisimmistä osa-alueista, sitä hyödynnetään useilla eri teknologian osa-alueilla kääntäjäsovelluksista itseajaviin autoihin. Yksinkertaistettuna koneoppimisella tarkoitetaan prosessia, jossa ohjelmistoa koulutetaan datalla tekemään ennustuksia tai luomaan kontenttia yms. Tätä ohjelmistoa kutsutaan malliksi (model).
 
 Viime vuosikymmenen aikana erityisen merkittävään rooliin on noussut keinotekoiset neuroverkot. Nämä neuroverkot ovat mahdollistaneet erilaisia läpimurtoja laajalla skaalalla teknologian osa-alueita, kuten luonnollisen kielen käsittelyssä ja autonomisissa järjestelmissä. Neuroverkot ovat perhe 'malleja' jotka pyrkivät jäljittelemään ihmisaivojen tapaa käsitellä tietoa. 
 
-Tämän seminaarityön tavoite on tarjota selkeä katsaus tai vähintään pintaraapaisu siihen, mitä koneoppimisella tarkoitetaan, mitä neuroverkot ovat ja miten ne toimivat, sekä miten niitä voidaan soveltaa. Tavoitteena ei ole akateemisesti laaja tuotos, vaan pienempi kokonaisuus, joka auttaa ymmärtämään perus käsitteet ja rakenteet.
+Tämän seminaarityön tavoite on tarjota selkeä katsaus tai vähintään pintaraapaisu siihen, mitä koneoppimisella tarkoitetaan, mitä neuroverkot ovat ja miten ne toimivat, sekä miten niitä voidaan soveltaa. Tavoitteena ei ole akateemisesti laaja tuotos, vaan pienempi kokonaisuus, joka auttaa ymmärtämään peruskäsitteet ja rakenteet.
 
 
 ## Koneoppimisen perusteet
-Koneoppiminen on tekoälyn osa-alue, jossa järjestelmät/ohjelmistot oppivat tekemään päätöksiä ennusteita tai luomaan datan perusteella ilman, että kaikkia sääntöjä tarvitsee erikseen määritellä ohjelmoimalla. Ideana on, että algoritmi havaitsee datasta toistuvia rakenteita ja oppii mallintamaan niitä, sekä pystyisi tämän pohjalta tekemään yleistyksiä uusiin tilanteisiin.
+Koneoppiminen on tekoälyn osa-alue, jossa järjestelmät/ohjelmistot oppivat tekemään päätöksiä, ennusteita tai luomaan datan perusteella ilman, että kaikkia sääntöjä tarvitsee erikseen määritellä ohjelmoimalla. Ideana on, että algoritmi havaitsee datasta toistuvia rakenteita ja oppii mallintamaan niitä, sekä pystyisi tämän pohjalta tekemään yleistyksiä uusiin tilanteisiin.
 
 Koneoppimisen perusajatus voidaan tiivistää karkeasta kolmeen vaiheeseen:
 
-- Data: Algoritmi saa esimerkkejä, kuten erilaisia arvoja, kuvia tai tektstiä.
+- Data: Algoritmi saa esimerkkejä, kuten erilaisia arvoja, kuvia tai tekstiä.
 - Oppiminen: Malli muokkaa sisäisiä parametrejään, jotta sen tekemät ennustukset paremmin vastaisivat opetusdataan.
 - Yleistys: Valmis malli pystyy toimimaan myös uudella ja opetusdatan ulkopuolisella aineistolla.
 
@@ -34,12 +34,12 @@ Koneoppiminen voidaan jakaa kolmeen pääluokkaan:
 Koneoppimismallit ja erityisesti neuroverkot pystyvät oppimaan monimutkaisia funktioita, joita on äärimmäisen vaikea määritellä käsin. Mallit pystyvät esimerkiksi: Tunnistamaan satojen muuttujien suhteita, yleistämään sotkuisesta ja epätäydellisestä datasta yms. 
 
 ## Keinotekoiset neuroverkot
-Keinotekoiset neuroverkot (Artificial neural networks, ANN) ovat koneoppimismalleja, jotka on suunniteltu imitoimaan sitä, miten ihmis-aivot käsittelevät tietoa. Siinä missä ihmis-aivot hydöyntävät neuroneita datan prosessoinnissa, keinotekoiset neuroverkot käyttävät keinotekoisia neuroneita datan analysointiin, säännönmukaisuuksien tunnistamiseen, sekä ennustamiseen. Ne kykenevät oppimaan monimutkaisia funktioita datasta ja niiden teho perustuu kerrokselliseen rakenteeseen. Neuroverkot toimivat perustana usealle modernille tekoälyn osa-alueelle, kuten kuvantunnistukselle, kielenmallinnukselle ja ohjausjärjestelmille.
+Keinotekoiset neuroverkot (Artificial neural networks, ANN) ovat koneoppimismalleja, jotka on suunniteltu imitoimaan sitä, miten ihmisaivot käsittelevät tietoa. Siinä missä ihmis-aivot hyödyntävät neuroneita datan prosessoinnissa, keinotekoiset neuroverkot käyttävät keinotekoisia neuroneita datan analysointiin, säännönmukaisuuksien tunnistamiseen, sekä ennustamiseen. Ne kykenevät oppimaan monimutkaisia funktioita datasta ja niiden teho perustuu kerrokselliseen rakenteeseen. Neuroverkot toimivat perustana usealle modernille tekoälyn osa-alueelle, kuten kuvantunnistukselle, kielenmallinnukselle ja ohjausjärjestelmille.
 
 ### Neuronin rakenne
-Kuten mainittu ANN:ät koostuvat keinotekoisista neuroneista, jotka konseptuaalisesti seuraavat biologisia neuroneita. Jokainen näistä neuroneista ottaa vastaan syötteitä, jotka voivat olla ulkoista dataa, tai muiden neuroneiden ulostuloja, ja jokainen neuroni tuottaa yhden ulostulon. Neuroverkon viimeisten ulostulo neuroneiden ulostulot on tarkoitus suorittaa mallille annettu tehtävä.
+Kuten mainittu ANN:ät koostuvat keinotekoisista neuroneista, jotka konseptuaalisesti seuraavat biologisia neuroneita. Jokainen näistä neuroneista ottaa vastaan syötteitä, jotka voivat olla ulkoista dataa, tai muiden neuroneiden ulostuloja, ja jokainen neuroni tuottaa yhden ulostulon. Neuroverkon viimeisten ulostuloneuronien arvot on tarkoitus suorittaa mallille annettu tehtävä.
 
-Yhden neuronin laskenta koostuu tyyppillisesti seuraavista vaiheista:
+Yhden neuronin laskenta koostuu tyypillisesti seuraavista vaiheista:
 
 - Syötteistä: x1,x2...,xn
 - Painot: Jokaisella syötteellä on paino, joka kertoo syötteen merkityksen.
@@ -52,17 +52,17 @@ Aktivaatiofunktioita on useita erilaisia, yleisimpiä näistä on:
 - Sigmoid: Tuottaa arvon välillä 0-1 ja on hyödyllinen todennäköisyyksien mallintamisessa, mutta altis vanhenemiselle.
 - ReLU(Rectified linear unit): Tuottaa arvon 0-∞, eli ulostulo on aina positiivinen arvo. ReLU on yksi yleisimmin käytetyistä aktivaatiofunktioista tehokkuuden vuoksi ja koska se mahdollistaa vastavirta-algoritmin tehostamisen.
 - Tanh(hyperbolic activation function): On samankaltainen kuin sigmoid funktio, mutta palauttaa arvon -1 - 1. Sitä käytetään useiten piilokerroksissa, kun tarvitaan laajempaa ulostulo skaalaa.
-- Softmax: Kääntää raa'an ulostulon todennäköisyyksiin, joita hyödynnetään moni luokkaisten tunnistus tehtävien parissa.
+- Softmax: Kääntää raa'an ulostulon todennäköisyyksiin, joita hyödynnetään moniluokkaisten tunnistus tehtävien parissa.
 
 
 ### Verkkoarkkitehtuuri
-Neuroverkot voidaan rakentaa erilaisiksi arkkitehtuureiksi riippuen siitä, millaista dataa käsitellään ja mitä ongelmaa ratkaistaan. Neuroverkot eivät siis koostu vain yksittäisistä neuroneista, vaan ne voidaan jakaa kerroksiin. Yleisesti ottaen nämä kerrokset ovat: Syötekerrros, joka vastaanottaa raakadatan, piilokerros joka suorittaa funktioita ja 'oppii', sekä ulostulo kerros joka tuottaa lopullisen vastauksen. Esimerkkejä neuroverkkoarkkitehtuureista ovat muun muassa:
+Neuroverkot voidaan rakentaa erilaisiksi arkkitehtuureiksi riippuen siitä, millaista dataa käsitellään ja mitä ongelmaa ratkaistaan. Neuroverkot eivät siis koostu vain yksittäisistä neuroneista, vaan ne voidaan jakaa kerroksiin. Yleisesti ottaen nämä kerrokset ovat: Syötekerrros, joka vastaanottaa raakadatan, piilokerros joka suorittaa funktioita ja 'oppii', sekä ulostulokerros joka tuottaa lopullisen vastauksen. Esimerkkejä neuroverkkoarkkitehtuureistaovat muun muassa:
 
 - Feedforward neuroverkot: Nämä ovat yksinkertaisimpia neuroverkkoja, tässä verkossa data kulkee yhteen suuntaan syötekerroksesta ulostulokerrokseen, käyden yhden tai jokaisen piilokerroksen. Data ei tässä arkkitehtuurissa koskaan palaa aikaisemmalle kerrokselle, se ei myöskään hyödynnä vastavirta-algoritmia ja sen pää-käyttötarkoitus on alkeellisissa tunnistus ja regressio tehtävissä.
 
-- Konvoluutioneuroverkot: On suunniteltu prosessoimaan etenkin dataa kuten kuvia. Se sisältää konvoluutiokerroksia jotka lisäävät filtterin ja oppivat havaitsemaan tärkeitä piirteitä datasta, kuten reunoja ja tekstuureja. Tämä tekee konvoluutioverkoista erityisen tehokkaita visuaalisissa tehtävissä.
+- Konvoluutioneuroverkot: On suunniteltu prosessoimaan etenkin dataa kuten kuvia. Se sisältää konvoluutiokerroksia jotka lisäävät filttereitä ja oppivat havaitsemaan tärkeitä piirteitä datasta, kuten reunoja ja tekstuureja. Tämä tekee konvoluutioverkoista erityisen tehokkaita visuaalisissa tehtävissä.
 
-- Toistuvat neuroverkot (RNN, recurrent neural networks): On suunniteltu jono ja aikajana datan, kuten tekstin käsittelyyn. Toisin kuin muissa arkkitehtuureissa toistuvilla neuroverkoilla on feedback looppeja jotka sallivat tiedonsiirron takaisin aikaisempiin kerroksiin antaen verkolle 'muistin'. Tämä toiminto auttaa toistuvia verkkoja tekemään ennustuksia perustuen kontekstiin, jonka aikaisempi data on tarjonnut. Tästä johtuen RNN:iä hyödynnetään erityisesti puheentunnistus ja kielimallinnus tehtävissä.
+- Toistuvat neuroverkot (RNN, recurrent neural networks): On suunniteltu jono ja aikajännedatan, kuten tekstin käsittelyyn. Toisin kuin muissa arkkitehtuureissa toistuvilla neuroverkoilla on takaisinkytkentöjä, jotka sallivat tiedonsiirron takaisin aikaisempiin kerroksiin antaen verkolle 'muistin'. Tämä toiminto auttaa toistuvia verkkoja tekemään ennustuksia perustuen kontekstiin, jonka aikaisempi data on tarjonnut. Tästä johtuen RNN:iä hyödynnetään erityisesti puheentunnistus ja kielimallinnus tehtävissä.
 
 Nämä kategoriat ovat vain osa erilaisita neuroverkkoarkkitehtuureista, mutta ovat mahdollisesti eniten käytettyjä nykypäivänä. 
 ## Oppimisprosessi
@@ -86,9 +86,9 @@ Backpropagation on keskeinen algoritmi neuroverkkojen koulutuksessa, jossa minim
 ### Haasteet ja rajoitteet neuroverkoissa
 Vaikka neuroverkot ovat tehokkaita ja monipuolisia menetelmiä, liittyy niihin silti rajoitteita ja haasteita. Ohessa käyn erittelen ja avaan keskeisimpiä näistä haasteista:
 
-- Vaatii suurta määrää dataa: Neuroverkot oppivat parametreja datan avulla, ja koska parametrejä voi olla jopa miljoonia, tehokas oppiminen edellyttää yleensä valtavia datasettejä. Liian vähäinen data voi johtaa ylisovittamiseen ja datan kerääminen on kallista ja hidasta tietyissä tapauksissa.
+- Vaatii suurta määrää dataa: Neuroverkot oppivat parametreja datan avulla, ja koska parametreja voi olla jopa miljoonia, tehokas oppiminen edellyttää yleensä valtavia datasettejä. Liian vähäinen data voi johtaa ylisovittamiseen ja datan kerääminen on kallista ja hidasta tietyissä tapauksissa.
 
-- Ylisovittaminen ja yleistettävyyden puute: Neuroverkko voi oppia liian tarkasti harjoitusdatan yksityiskohtia sen sijaan, että se oppisi yleistettävää rakennetta. Ylisovittaminen on etenkin ongelma, kun data on epätasapainoista. Käänteisesti myös alisovittaminen voi olla ongelma, jos malli on liian yksinkertainen se ei onnistu havaitsemaan syvempää dataa eikä täten suoriudu tesi- tai harjoitusdatan parissa.
+- Ylisovittaminen ja yleistettävyyden puute: Neuroverkko voi oppia liian tarkasti harjoitusdatan yksityiskohtia sen sijaan, että se oppisi yleistettävää rakennetta. Ylisovittaminen on etenkin ongelma, kun data on epätasapainoista. Käänteisesti myös alisovittaminen voi olla ongelma, jos malli on liian yksinkertainen se ei onnistu havaitsemaan syvempää dataa eikä täten suoriudu testi- tai harjoitusdatan parissa.
 
 - Laskennallinen kustannus: Neuroverkot, etenkin syvät verkot vaativat paljon laskentatehoa, muistia ja pitkiä koulutusaikoja. Tämä tekee kehityksestä resurssien kannalta vaativaa ja voi rajoittaa joidenkin sovellusten käyttöä. 
 
@@ -128,8 +128,28 @@ Mallin koulutus sujui odotetusti ja suorituskyky kehittyi tasaisesti viiden epoo
 
 Kuvat osoittavat, että koulutus ja validointitarkkuus nousee tasaisesti, eikä ole merkkejä ylisovittamisesta. Tarkoittaen, että malli oppii dataa oikein ja toimii kevyenä demomstraationa neuroverkon toiminnasta.
 
-## Pohdinta
+## Pohdinta ja yhteenveto
+Tämän tutkielman tavoite oli tarjota tiivis ja selkeä katsaus koneoppimisen ja erityisesti neuroverkkojen perusteisiin. Keskityimme neuroverkkojen rakenteisiin, oppimisprosessiin, optimointiin, sekä haasteisiin. Työssä tarkoituksella pyrittiin välttämään liiallista teknistä raskautta, sen sijaan keskittyen ydinasioihin ja peruskonseptien valaisemiseen.
 
-## Yhteenveto
+Käytännön testiosuudessa toteutettu malli osoitti, miten teoreettiset käsitteet voidaan konkretisoida toimivassa ja yksinkertaisessa neuroverkossa. Vaikka mallia koulutettiin vain vähän, se saavutti varsin hyvän tarkkuuden ja esitteli neuroverkon oppimiskäyttäytymistä.
+
+Kokonaisuutena työ saavutti tavoitteensa, se tarjoaa tiiviin, mutta toimivan kokonaiskuvan koneoppimisesta ja keinotekoisista neuroverkoista. Työ toimii myös hyvänä pohjana niille, ketkä haluavat syventyä aiheeseen pintaraapaisua pidemmälle ja työtä itseään on mahdollista laajentaa myöhemmin.
 
 ## Lähteet
+- Goodfellow, I., Bengio, Y. & Courville, A. (2016). Deep Learning. MIT Press.
+
+- https://www.geeksforgeeks.org/artificial-intelligence/artificial-neural-networks-and-its-applications/
+
+- https://developers.google.com/machine-learning/crash-course/neural-networks
+
+- MIT Introduction to Deep Learning (course notes) – https://introtodeeplearning.com/
+
+- https://developer.nvidia.com/discover/artificial-neural-network
+
+- TensorFlow Documentation – https://www.tensorflow.org/
+
+- Keras API Documentation – https://keras.io/ 
+
+- Fashion-MNIST Dataset Reference – https://github.com/zalandoresearch/fashion-mnist
+
+- ChatGPT 5 sarjan kielimallia käytetty apuna tekstinmuotoilussa, joidenkin termien suomennoksessa, sekä virheen korjaamisessa tutkielman testiosuuden koodissa.
