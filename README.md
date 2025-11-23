@@ -99,11 +99,34 @@ Muita mahdollisia haasteita ovat muun muassa erilaiset gradienttiongelmat, herkk
 ## Testiosuus
 
 ### Toteutusympäristö
+Testimallin koulutus ja testaus toteutettiin seuraavassa ympäristössä:
 
+- Käyttöjärjestelmä: Windows 11
+- Python-versio: 3.12
+- Kirjastot: TensorFlow 2.17, Keras, Matplotlib 3
+- Data: Fashion-MNIST mikä sisältää 70 000 harmaansävyistä 28x28 kuvaa, ja niistä 10 eri vaatekategoriaa. 60 000 kuvaa käytettiin kouluttamiseen ja 10 000 testaukseen. TensorFlow valitsi automaattisesti CPU-laskennan, joka on riittävä toteutuksen tarpeille.
 ### Koodirunko
+Testi toteutettiin Python tiedostossa train_model.py, joka sisältää melko yksinkertaisen neuroverkkomallin koulutuksen ja arvioinnin. Malli rakentuu seuraavista osista/vaiheista:
 
+- Datan lataus ja esikäsittely: Fashion-MNIST data haetaan suoraan TensorFlown valmiista datasets moduulista ja kuvien pikseliarvot skaalataan välille 0-1 jakamalla ne luvulla 255.
+
+- Arkkitehtuuri: Mallina käytettiin alkeellista syvää neuroverkkoa: 'Flatten' muuttaa 28x28 pikselin kuvat yhdeksi vektoriksi. 'Dense(128, relu)' toimii piilokerroksena ja 'Dense(10, softmax)' tuottaa todennäköisyydet joka luokalle.
+
+- Mallin opettaminen:
+Malli koulutettiin näihin asetuksiin:
+Optimointialgoritmi Adam, kustannusfunktio sparse categorical crossentropy, epookit 5, validointijoukko 10% opetusaineistosta. Sekä koulutus, että validointitarkkuus tallennettiin kuvaajaa varten.
+
+- Mallin arviointi: Lopuksi mallin suorituskyky arvioidaan erillisellä testidatalla ja testitarkkuus saadaan.
+
+- Tulosten visualisointi:
+Koulutuksen tarkkuutta kuvaava käyrä tallennettiin tiedostoon **training_curve.png** jota käytetään alla 'Tulokset' osiossa.
 ### Tulokset
+Mallin koulutus sujui odotetusti ja suorituskyky kehittyi tasaisesti viiden epookin aikana. Lopullinen tarkkuus testidatassa oli 0.8754, mikä tarkoittaa että neuroverkko luokittelee testidatan kuvista noin 87.5% oikein ilman mitään suurempaa optimointia. Koulutusvaiheen aikana tallennettiin kuvaaja koulutus ja validointidatasta, sekä kuvakaappaus terminaalin epookeista:
 
+![Koulutus tarkkuus käyrä](./images/training_curve.png)
+![epookit terminaalissa](./images/Screenshot%202025-11-23%20113833.png)
+
+Kuvat osoittavat, että koulutus ja validointitarkkuus nousee tasaisesti, eikä ole merkkejä ylisovittamisesta. Tarkoittaen, että malli oppii dataa oikein ja toimii kevyenä demomstraationa neuroverkon toiminnasta.
 
 ## Pohdinta
 
